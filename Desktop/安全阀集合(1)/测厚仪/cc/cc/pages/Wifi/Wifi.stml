@@ -1,0 +1,186 @@
+<template>
+
+    <view class="page">
+        <safe-area>
+            <view class="nav-bar">
+                <view class="nav-bar-back" v-if="isBack">
+                    <image class="nav-bar-icon" src="http://ae8b3ee28597856d3283.qiniucdn.apicloud-system.com/apicloud/6958c7448f8d7106d3ee273fa7430063.png" />
+                    <text class="nav-bar-text" onclick="back">返回</text>
+                </view>
+                <text class="nav-bar-text">检测详情页</text>
+            </view>
+        </safe-area>
+        <!-- 顶部导航 -->
+        <view class="view_1">
+            <button class="button_1" onclick="con()">断开</button>
+
+            <button class="button_2" onclick="scan()">扫描</button>
+        </view>
+    </view>
+</template>
+<script>
+export default {
+    name: 'hoc-case-es',
+    apiready() {
+        var me =this
+var wifi= api.require('bgnWiFi');
+wifi.isWifiEnabled(function(ret, err) {
+    if(ret.enabled==true){
+me.isture=true;
+api.toast({
+    msg:'wifi已打开'
+})
+    }else{
+
+  api.toast({
+    msg:'wifi请打开'
+})      
+    }
+      // api.alert({msg:JSON.stringify(ret)});
+});
+
+
+    },
+    
+    data() {
+        return {
+            // 案例列表
+            WifiList: [],
+            isture:false,
+            msg: {
+                type: String,
+                default: ''
+            },
+            isBack: {
+                type: Boolean,
+                default: false
+            }
+        }},
+  methods: {
+       back() {
+            api.closeWin();
+        },
+        con(){
+           var ak='82fed40620d94c10a56f419d23ef4a04';
+           var as='45877b415117489cbf458a9504a16c9c';
+         var gizWifiSDK = api.require('gizWifiSDK');
+gizWifiSDK.startWithAppInfo({"appInfo":{"appId":"your_app_id", "appSecret":"your_app_secret"}}, function(ret, err) {
+    alert("ret = " + JSON.stringify(ret) + "err = " + JSON.stringify(err))
+});
+        },
+        scan(){
+           var socketManager = api.require('socketManager');
+socketManager.createSocket({
+    host: '192.168.1.100',
+    port: 8282
+}, function(ret, err) {
+    if (ret) {
+        api.alert({
+            msg: JSON.stringify(ret)
+        })
+    } else {
+        api.alert({
+            msg: JSON.stringify(err)
+        })
+    }
+});
+var wifi= api.require('bgnWiFi');
+wifi.startScan({
+    status: true,      //布尔型；true||false，是否操作成功
+    results:[
+     ]          //JSON搜索到的wifi热点信息
+},function(ret, err) {
+        api.alert({msg:JSON.stringify(ret)});
+});
+
+        },
+    }
+};
+</script>
+<style>
+.page {
+    height: 100%;
+    background-color: #fff;
+}
+scroll-view {
+    height: 100%;
+}
+.case-item {
+    flex-direction: row;
+    height: 120px;
+    padding: 10px 15px;
+    box-sizing: border-box;
+}
+.case-item:active {
+    opacity: 0.8;
+}
+.case-item-img {
+    width: 100px;
+    height: 100px;
+    margin-right: 16px;
+    border: 1px solid #f1f1f1;
+    border-radius: 8px;
+}
+.item-title {
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+    flex: 1;
+}
+.case-footer {
+    height: 44px;
+    justify-content: center;
+    align-items: center;
+}
+.case-loadDesc {
+    font-size: 12px;
+    color: #999;
+}
+.nav-bar {
+    width: 100%;
+    height: 45px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    background-color: #fff;
+}
+.nav-bar-back {
+    position: absolute;
+    left: 15px;
+    width: 100px;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+}
+.nav-bar-icon {
+    margin-right: 5px;
+    width: 15px;
+    height: 15px;
+}
+.nav-bar-text {
+    font-size: 20px;
+    color: #333;
+}
+.button_1 {
+    width: 50%;
+    border-color: #dfdfdf;
+    border-top-color: #dfdfdf;
+    border-left-color: #dfdfdf;
+    border-right-color: #dfdfdf;
+    border-bottom-color: #dfdfdf;
+    height: 50px
+}
+.button_2 {
+    width: 50%;
+    border-color: #dfdfdf;
+    border-top-color: #dfdfdf;
+    border-left-color: #dfdfdf;
+    border-right-color: #dfdfdf;
+    border-bottom-color: #dfdfdf;
+    height: 50px
+}
+.view_1 {
+    flex-direction: row-reverse
+}
+</style>
