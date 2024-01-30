@@ -1,0 +1,133 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/main/main",
+			"style": {
+				"navigationBarTitleText": "测厚仪-首页"
+			}
+		},
+		{
+			"path": "pages/login/login",
+			"style": {
+				"navigationBarTitleText": "测厚仪-登录"
+			}
+		},
+		{
+			"path": "pages/setting/setting",
+			"style": {
+				"navigationBarTitleText": "测厚仪-设置"
+			}
+		},
+		
+		{
+			"path": "pages/task/task",
+			"style": {
+				"navigationBarTitleText": "历史数据"
+			}
+		},
+		{
+			"path": "pages/cedian/cedian",
+			"style": {
+				"navigationBarTitleText": "测点"
+			}
+		},
+		
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "测厚仪APP"
+			}
+		},
+		{
+			"path": "pages/index/indexOld",
+			"style": {
+				"navigationBarTitleText": "uni-app"
+			}
+		},
+		{
+			"path": "pages/index/bIndex",
+			"style": {
+				"navigationBarTitleText": "B页面"
+			}
+		}
+	    ,{
+            "path" : "pages/setting/setting",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/cedian/cedian",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/login/login",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "登录",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+      
+       
+        ,{
+            "path" : "pages/yujingset/yujingset",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "预警设置",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/wifi/wifi",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "测厚仪网络",
+                "enablePullDownRefresh": false
+            }
+            
+        },
+        {
+        	"path" : "pages/mission/mission",
+        	"style" : 
+        	{
+        		"navigationBarTitleText" : "任务列表",
+        		"enablePullDownRefresh" : false
+        	}
+        },
+        {
+        	"path" : "pages/detail/detail",
+        	"style" : 
+        	{
+        		"navigationBarTitleText" : "信息详细",
+        		"enablePullDownRefresh" : false
+        	}
+        }
+    ],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "测厚仪",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	},
+	"condition" : { //模式配置，仅开发期间生效
+		"current": 0, //当前激活的模式(list 的索引项)
+		"list": [
+			{
+				"name": "", //模式名称
+				"path": "pages/main/main", //启动页面，必选
+				"query": "" //启动参数，在页面的onLoad函数里面得到
+			}
+		]
+	}
+}
