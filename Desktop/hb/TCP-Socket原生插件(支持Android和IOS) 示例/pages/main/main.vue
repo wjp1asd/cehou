@@ -31,6 +31,7 @@
 			}
 		},
 		onLoad() {
+			
 			var username =uni.getStorageSync("username");
 			if(!username){
 			uni.showToast({
@@ -42,12 +43,42 @@
 			})
 			}else{
 				this.username="当前登录账号："+username;
+				// 获取一下 用户最新信息
+				//this.getUser();
 				this.clickx=true;
 			}
 			
 			
 		},
 		methods: {
+			getUser:function(){
+				var that =this;
+				// if(that.ssid.length==0){
+				// 	return
+				// }
+			uni.request({
+			    url: uni.getStorageSync("backurl")+"api.ashx?do=testadmin", //仅为示例，并非真实接口地址。
+			    data: {
+			      key:that.ssid
+			    },
+			    header: {
+			        'custom-header': 'hello' //自定义请求头信息
+			    },
+			    success: (res) => {
+					console.log(res);
+					if(res.data.length==0){
+					  uni.showModal({
+					  	content:"暂无匹配数据"
+					  })
+						return;
+					}
+						that.data =res.data;
+					
+			      
+			    }
+			});			
+				
+			},
 			nav(e){
 				var a=uni;
 					var i =e.currentTarget.dataset.i;

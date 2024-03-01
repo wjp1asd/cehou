@@ -34,20 +34,24 @@
 			
 			
 		</uni-card>
-		<view class="uni-container" style="margin-top: 55px;">
+		<view class="uni-container" style="margin-top: 5px;">
 			<uni-list v-for="(item, index) in data"  >
 				
 			
 			<view @click="showff(item)" :key="index" >
 			<uni-card  >
 				ID：{{ item.ID}}
-				类型：{{item.state}}
+				类型：{{item.state}} 编号：{{item.GJNo}}
 				<br>
 				委托单号：{{item.WTNo}}
 				<br>
 				任务单号：{{ item.RWNo}}
 				<br>
 				批次号：{{item.FNo}}
+				<br>
+				更新时间：{{item.wrtime}}
+				<br>
+				检验人：{{item.Jianyanren}}
 				<br>
 				<uni-icons type="paperplane" size="30" class="ff" ></uni-icons>
 			</uni-card>	
@@ -84,7 +88,12 @@
 				
 			};
 		},
-		onLoad() {
+		onLoad(e) {
+			
+			
+			this.ssid =e.gid
+			
+		
 		 this.lk();
 		},
 		methods: {
@@ -111,20 +120,44 @@
 						return;
 					}
 						that.data =res.data;
-					
+	     for (var i = 0; i < res.data.length; i++) {
+	     	var str= res.data[i].wrtime;
+		 str=	str.replace("/Date(","");
+			str= str.replace("000)/","");
+			uni.showModal({
+				content:str
+			})
+			//const date = new Date(str);
+			const date = new Date(1704109572);
+			const dateString =date.getFullYear();
+			  
+			//res.data[i].wrtime =dateString;
+	     }
 			      
 			    }
 			});			
 				
 			},
 			showff:function(e){
+			// 验证 检验人身份
 			
-			
-			
+			var user =uni.getStorageSync("user");
 			uni.setStorageSync("temdata",e);
+			if(e.Jianyanren!=JSON.parse(user).usrname){
+				
+			uni.showModal({
+				content:"检验人身份不符合",
+				
+			})	
+			//return;
+			}else{
+			
 			uni.navigateTo({
 				url:"../cedian/cedian"
-			})	
+			})		
+			}
+			
+			
 				
 			},
 			scan:function(e){

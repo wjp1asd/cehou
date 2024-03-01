@@ -1,8 +1,9 @@
 <style>
 	.input{
-		width: 50%;
+		width: 40%;
 		margin-left: 2px;
 	}
+	
 	.row{
 	    display: flex;
 		flex-direction: row;
@@ -11,10 +12,13 @@
 		background-color: red;
 	}
 	.title{
+		font-size: 15px;
 		height: 45px;
 		line-height: 45px;
 	}
-	
+	button{
+		font-size: 13px;
+	}
 </style>
 
 <template>
@@ -24,19 +28,19 @@
 		<view class="uni-common-mt">
 			<view class="uni-form-item uni-column">
 				<view class="title">任务单号：</view>
-				<input class="uni-input"   disabled="true" v-model="item.RWNo" placeholder="请链接测厚仪读值获得焦点" />
+				<input class="uni-input"   disabled="true" v-model="item.RWNo" placeholder="请链接测厚仪读值" />
 			</view>
 			<view class="uni-form-item uni-column">
 				<view class="title">  分单号：</view>
-				<input class="uni-input" disabled="true" v-model="item.FNo"  placeholder="请链接测厚仪读值获得焦点" />
+				<input class="uni-input" disabled="true" v-model="item.FNo"  placeholder="请链接测厚仪读值" />
 			</view>
 			<view class="uni-form-item uni-column">
 				<view class="title"  >委托单号：</view>
-				<input class="uni-input" disabled="true" v-model="item.WTNo"  placeholder="请链接测厚仪读值获得焦点" />
+				<input class="uni-input" disabled="true" v-model="item.WTNo"  placeholder="请链接测厚仪读值" />
 			</view>
 			<view class="uni-form-item uni-column">
 				<view class="title"> 耦合剂：</view>
-				<input class="uni-input" disabled="true" v-model="item.Oname"  placeholder="请链接测厚仪读值获得焦点" />
+				<input class="uni-input" disabled="true" v-model="item.Oname"  placeholder="请链接测厚仪读值" />
 				
 				<!-- <picker @change="bindPickerChange" :value="index" :range="array">
 			<view class="uni-input" v-model="item.Oname" >{{array[index]}}</view>
@@ -45,159 +49,173 @@
 		
 			<view class="uni-form-item uni-column">
 				<view class="title">管道/容器：</view>
-				<input class="uni-input" disabled="true" v-model="item.state" placeholder="请链接测厚仪读值获得焦点" />
+				<input class="uni-input" disabled="true" v-model="item.state" placeholder="请链接测厚仪读值" />
 			</view>
 			
-			<view class="uni-form-item uni-column">、
+			<view class="uni-form-item uni-column">
 				<view class="title">图片：</view>
-				<image   :src="item.WT_pho"  mode="aspectFill" height="100px" style="margin-left: 5%;"></image>
+				<image   :src="item.WT_pho" v-if="item.WT_pho" mode="aspectFill" height="100px" style="margin-left: 5%;"></image>
 			</view>
 			<view class="uni-form-item uni-column">
 			
 				<view class="title">测点编号1：{{item.Mpref1}}</view>
-				<!-- <input class="uni-input" v-model="item.Mpref1"  disabled="true" placeholder="请链接测厚仪读值获得焦点" /> -->
+				<!-- <input class="uni-input" v-model="item.Mpref1"  disabled="true" placeholder="请链接测厚仪读值" /> -->
 			   	
 			</view>
 			<view class="uni-form-item uni-column">
 				
 				<view class="row">
 				<view class="title">测点厚度1：</view>	
-				<input class="uni-input" v-bind:disabled="p1" v-model="nowvalue1"  placeholder="请链接测厚仪读值获得焦点" />
+				<input class="uni-input" v-bind:disabled="p1" v-model="nowvalue1"  placeholder="请链接测厚仪读值" />
 				<button @click="lock(1)" >{{p1?"锁定":"未锁定"}}
 				</button>
 				</view>
 				
 			</view>
 			<view class="uni-form-item uni-column">
-				<view class="title">测点编号2：</view>
-				<input class="uni-input" v-model="item.Mpref2"  disabled="true"   placeholder="请链接测厚仪读值获得焦点" />
+				<view class="title">测点编号2：{{item.Mpref2}}</view>
+				<!-- <input class="uni-input" v-model="item.Mpref2"  disabled="true"   placeholder="请链接测厚仪读值" /> -->
 			</view>
 			<view class="uni-form-item uni-column">
-				<view class="title">测点厚度2：</view>
+				
 			<view class="row">
-			<input class="uni-input" v-bind:disabled="p2" v-model="nowvalue2"  placeholder="请链接测厚仪读值获得焦点" />
+				<view class="title">测点厚度2：</view>
+			<input class="uni-input" v-bind:disabled="p2" v-model="nowvalue2"  placeholder="请链接测厚仪读值" />
 			<button @click="lock(2)" >{{p2?"锁定":"未锁定"}}
 			</button>
-			</view>	</view>
-			<view class="uni-form-item uni-column">
-				<view class="title">测点编号3：</view>
-				<input class="uni-input" v-model="item.Mpref3" disabled="true"  placeholder="请链接测厚仪读值获得焦点" />
+			</view>	
+			
 			</view>
 			<view class="uni-form-item uni-column">
-				<view class="title">测点厚度3：</view>
+				<view class="title">测点编号3：{{item.Mpref3}}</view>
+				<!-- <input class="uni-input" v-model="item.Mpref3" disabled="true"  placeholder="请链接测厚仪读值" /> -->
+			</view>
+			<view class="uni-form-item uni-column">
+			
 			<view class="row">
-			<input class="uni-input" v-bind:disabled="p3" v-model="nowvalue3"  placeholder="请链接测厚仪读值获得焦点" />
+					<view class="title">测点厚度3：</view>
+			<input class="uni-input" v-bind:disabled="p3" v-model="nowvalue3"  placeholder="请链接测厚仪读值" />
 			<button @click="lock(3)" >{{p3?"锁定":"未锁定"}}
 			</button>
 			</view>	</view>
 			<view class="uni-form-item uni-column">
-				<view class="title">测点编号4：</view>
-				<input class="uni-input" v-model="item.Mpref4"  disabled="true"  placeholder="请链接测厚仪读值获得焦点" />
+				<view class="title">测点编号4：{{item.Mpref4}}</view>
+				<!-- <input class="uni-input" v-model="item.Mpref4"  disabled="true"  placeholder="请链接测厚仪读值" /> -->
 			</view>
 			<view class="uni-form-item uni-column">
-				<view class="title">测点厚度4：</view>
+				
 			<view class="row">
-			<input class="uni-input" v-bind:disabled="p4" v-model="nowvalue4"  placeholder="请链接测厚仪读值获得焦点" />
+			<view class="title">测点厚度4：</view>	
+			<input class="uni-input" v-bind:disabled="p4" v-model="nowvalue4"  placeholder="请链接测厚仪读值" />
 			<button @click="lock(4)" >{{p4?"锁定":"未锁定"}}
 			</button>
 			</view></view>
 			<view class="uni-form-item uni-column">
-				<view class="title">测点编号5：</view>
-				<input class="uni-input" v-model="item.Mpref5"  disabled="true"  placeholder="请链接测厚仪读值获得焦点" />
+				<view class="title">测点编号5：{{item.Mpref5}}</view>
+				<!-- <input class="uni-input" v-model="item.Mpref5"  disabled="true"  placeholder="请链接测厚仪读值" /> -->
 			</view>
 			<view class="uni-form-item uni-column">
-				<view class="title">测点厚度5：</view>
+				
 			<view class="row">
-			<input class="uni-input" v-bind:disabled="p5" v-model="nowvalue5"  placeholder="请链接测厚仪读值获得焦点" />
+			<view class="title">测点厚度5：</view>	
+			<input class="uni-input" v-bind:disabled="p5" v-model="nowvalue5"  placeholder="请链接测厚仪读值" />
 			<button @click="lock(5)" >{{p5?"锁定":"未锁定"}}
 			</button>
 			</view></view>
 			<view class="uni-form-item uni-column">
-				<view class="title">测点编号6：</view>
-				<input class="uni-input" v-model="item.Mpref6"  disabled="true"  placeholder="请链接测厚仪读值获得焦点" />
+				<view class="title">测点编号6：{{item.Mpref6}}</view>
+				<!-- <input class="uni-input" v-model="item.Mpref6"  disabled="true"  placeholder="请链接测厚仪读值" /> -->
 			</view>
 			<view class="uni-form-item uni-column">
-				<view class="title">测点厚度6：</view>
+				
 			<view class="row">
-			<input class="uni-input" v-bind:disabled="p6" v-model="nowvalue6"  placeholder="请链接测厚仪读值获得焦点" />
+			<view class="title">测点厚度6：</view>	
+			<input class="uni-input" v-bind:disabled="p6" v-model="nowvalue6"  placeholder="请链接测厚仪读值" />
 			<button @click="lock(6)" >{{p6?"锁定":"未锁定"}}
 			</button>
 			</view></view>
 			<view class="uni-form-item uni-column">
-				<view class="title">测点编号7：</view>
-				<input class="uni-input" v-model="item.Mpref7"  disabled="true"  placeholder="请链接测厚仪读值获得焦点" />
+				<view class="title">测点编号7：{{item.Mpref7}}</view>
+				<!-- <input class="uni-input" v-model="item.Mpref7"  disabled="true"  placeholder="请链接测厚仪读值" /> -->
 			</view>
 			<view class="uni-form-item uni-column">
-				<view class="title">测点厚度7：</view>
+			
 			<view class="row">
-			<input class="uni-input" v-bind:disabled="p7" v-model="nowvalue7"  placeholder="请链接测厚仪读值获得焦点" />
-			<button @click="lock(1)" >{{p7?"锁定":"未锁定"}}
+				<view class="title">测点厚度7：</view>	
+			<input class="uni-input" v-bind:disabled="p7" v-model="nowvalue7"  placeholder="请链接测厚仪读值" />
+			<button @click="lock(7)" >{{p7?"锁定":"未锁定"}}
 			</button>
 			</view></view>
 			<view class="uni-form-item uni-column">
-				<view class="title">测点编号8：</view>
-				<input class="uni-input" v-model="item.Mpref8"  disabled="true"  placeholder="请链接测厚仪读值获得焦点" />
+				<view class="title">测点编号8：{{item.Mpref8}}</view>
+				<!-- <input class="uni-input" v-model="item.Mpref8"  disabled="true"  placeholder="请链接测厚仪读值" /> -->
 			</view>
 			<view class="uni-form-item uni-column">
-				<view class="title">测点厚度8：</view>
+				
 				<view class="row">
-				<input class="uni-input" v-bind:disabled="p8" v-model="nowvalue8"  placeholder="请链接测厚仪读值获得焦点" />
+					<view class="title">测点厚度8：</view>
+				<input class="uni-input" v-bind:disabled="p8" v-model="nowvalue8"  placeholder="请链接测厚仪读值" />
 				<button @click="lock(8)" >{{p8?"锁定":"未锁定"}}
 				</button>
 				</view>	</view>
 			<view class="uni-form-item uni-column">
-				<view class="title">测点编号9：</view>
-				<input class="uni-input"v-model="item.Mpref9"  disabled="true"  placeholder="请链接测厚仪读值获得焦点" />
+				<view class="title">测点编号9：{{item.Mpref9}}</view>
+				<!-- <input class="uni-input"v-model="item.Mpref9"  disabled="true"  placeholder="请链接测厚仪读值" /> -->
 			</view>
 			<view class="uni-form-item uni-column">
-				<view class="title">测点厚度9：</view>
+				
 				<view class="row">
-				<input class="uni-input" v-bind:disabled="p9" v-model="nowvalue9"  placeholder="请链接测厚仪读值获得焦点" />
+				<view class="title">测点厚度9：</view>	
+				<input class="uni-input" v-bind:disabled="p9" v-model="nowvalue9"  placeholder="请链接测厚仪读值" />
 				<button @click="lock(9)" >{{p9?"锁定":"未锁定"}}
 				</button>
 				</view></view>	<view class="uni-form-item uni-column">
-				<view class="title">测点编号10：</view>
-				<input class="uni-input" v-model="item.Mpref10"  disabled="true"  placeholder="请链接测厚仪读值获得焦点" />
+				<view class="title">测点编号10：{{item.Mpref10}}</view>
+				<!-- <input class="uni-input" v-model="item.Mpref10"  disabled="true"  placeholder="请链接测厚仪读值" /> -->
 			</view>
 			<view class="uni-form-item uni-column">
-				<view class="title">测点厚度10：</view>
+				
 			<view class="row">
-			<input class="uni-input" v-bind:disabled="p10" v-model="nowvalue10"  placeholder="请链接测厚仪读值获得焦点" />
+			<view class="title">测点厚度10：</view>	
+			<input class="uni-input" v-bind:disabled="p10" v-model="nowvalue10"  placeholder="请链接测厚仪读值" />
 			<button @click="lock(10)" >{{p10?"锁定":"未锁定"}}
 			</button>
 			</view ></view>
 <view class="uni-form-item uni-column">
-				<view class="title">测点编号11：</view>
-				<input class="uni-input"v-model="item.Mpref11"  disabled="true"  placeholder="请链接测厚仪读值获得焦点" />
+				<view class="title">测点编号11：{{item.Mpref11}}</view>
+				<!-- <input class="uni-input"v-model="item.Mpref11"  disabled="true"  placeholder="请链接测厚仪读值" /> -->
 			</view>
 	<view class="uni-form-item uni-column">
-				<view class="title">测点厚度11：</view>
+				
 			<view class="row">
-			<input class="uni-input" v-bind:disabled="p11" v-model="nowvalue11"  placeholder="请链接测厚仪读值获得焦点" />
+			<view class="title">测点厚度11：</view>	
+			<input class="uni-input" v-bind:disabled="p11" v-model="nowvalue11"  placeholder="请链接测厚仪读值" />
 			<button @click="lock(11)" >{{p11?"锁定":"未锁定"}}
 			</button>
 			</view >
 </view>
 <view class="uni-form-item uni-column">
-				<view class="title">测点编号12：</view>
-				<input class="uni-input"v-model="item.Mpref12"  disabled="true"  placeholder="请链接测厚仪读值获得焦点" />
+				<view class="title">测点编号12：{{item.Mpref12}}</view>
+				<!-- <input class="uni-input"v-model="item.Mpref12"  disabled="true"  placeholder="请链接测厚仪读值" /> -->
 			</view>
 	<view class="uni-form-item uni-column">
-				<view class="title">测点厚度12：</view>
+				
 			<view class="row">
-			<input class="uni-input" v-bind:disabled="p12" v-model="nowvalue12"  placeholder="请链接测厚仪读值获得焦点" />
+			<view class="title">测点厚度12：</view>	
+			<input class="uni-input" v-bind:disabled="p12" v-model="nowvalue12"  placeholder="请链接测厚仪读值" />
 			<button @click="lock(12)" >{{p12?"锁定":"未锁定"}}
 			</button>
 			</view >
 			</view>
 	<view class="uni-form-item uni-column">
-		<view class="title">测点编号13：</view>
-		<input class="uni-input"v-model="item.Mpref13"  disabled="true"  placeholder="请链接测厚仪读值获得焦点" />
+		<view class="title">测点编号13：{{item.Mpref13}}</view>
+		<!-- <input class="uni-input"v-model="item.Mpref13"  disabled="true"  placeholder="请链接测厚仪读值" /> -->
 	</view>
 	<view class="uni-form-item uni-column">
-				<view class="title">测点厚度13：</view>
+				
 			<view class="row">
-			<input class="uni-input" v-bind:disabled="p13" v-model="nowvalue13"  placeholder="请链接测厚仪读值获得焦点" />
+			<view class="title">测点厚度13：</view>	
+			<input class="uni-input" v-bind:disabled="p13" v-model="nowvalue13"  placeholder="请链接测厚仪读值" />
 			<button @click="lock(13)" >{{p13?"锁定":"未锁定"}}
 			</button>
 			</view >
@@ -210,8 +228,13 @@
 	<button class="btn-default" style="background-color:skyblue;width:50%;margin-left: 10px;" @click="setInfo()">信息</button>
 	<button class="btn-default" style="background-color:cornsilk;width:50%;margin-left: 10px;" @click="ret()">复位</button>
 	<button class="btn-default" style="background-color:orangered;width:50%;margin-left: 10px;" @click="ret1()">帮助</button>
-			
-		
+	<!-- 输入框示例 -->
+<uni-popup ref="inputDialog" type="dialog">
+<uni-popup-dialog ref="inputClose" 
+ mode="input" title="链接测厚仪网络"  v-model="wifiname"
+placeholder="请输入内容" @confirm="dialogInputConfirm"></uni-popup-dialog>
+</uni-popup>		
+	
 	</view>
 	</view>
 	</view>
@@ -234,7 +257,7 @@
 			   nowvalue2:0,
 			    nowvalue3:0,
 				 nowvalue4:0,
-				  nowvalu5:0,
+				  nowvalue5:0,
 				   nowvalue6:0,
 				    nowvalue7:0,
 					 nowvalue8:0,
@@ -243,7 +266,8 @@
 					 nowvalue11:0,
 					  nowvalue12:0,
 					  nowvalue13:0,
-					  
+			 wifiname:"USR-232",
+		     connected:false,
 			 channel: '1',
 			 conect1:['3A', '01', '00', '10', '00', '00', '00', '02','21', '31', '01', '00','01', '00', '01', '55','55', 'AA', 'AA', '08','00', '00', '00','6E', '02'],
 			 conect2:['3A', '01', '00', '10', '00', '00', '00', '02','21', '31', '01', '00','01', '00', '01', '55','55', 'AA', 'AA', '09','00', '00', '00','6E', '02'],
@@ -270,15 +294,55 @@
 		onLoad() {
 			
 			var item =uni.getStorageSync("temdata");
-			 // uni.showModal({
-			 // 	content:JSON.stringify(item)
-			 // })
+			var that=this;
+			uni.startWifi({
+				success: res => {
+					console.log('Wi-Fiinit成功:', res);
+					that.init=true;
+					
+				},
+				fail: err => {
+					console.error('Wi-Fiinit失败:', err);
+				}
+			});
 			this.item=item;
 			let newStr = item.WT_pho.replace("~/", "");
 			item.WT_pho =uni.getStorageSync("backurl")+newStr ;
 			
 		},
 		methods: {
+			dialogInputConfirm(val) {
+							uni.showLoading({
+								title: '3秒后会关闭'
+							})
+			
+							setTimeout(() => {
+								uni.hideLoading()
+								console.log(val)
+								this.value = val
+								// 关闭窗口后，恢复默认内容
+								
+							console.log('选中的WiFi:', val);
+							uni.connectWifi({
+								SSID: val,
+								password: '',
+								success: res => {
+									console.log('Wi-Fi连接成功:', res);
+									uni.showModal({
+										content:"连接成功"
+									})
+								},
+								fail: err => {
+									uni.showModal({
+										content:"连接失败"+err.errMsg
+									})
+								}
+							});
+								
+								
+								this.$refs.inputDialog.close()
+							}, 3000)
+						},
 			updatevalue:function(){
 				if(this.p1==false){
 					this.nowvalue1=this.nowvalue;
@@ -375,7 +439,16 @@
 					case 10:
 						this.p10=!this.p10;
 					break;	
-					
+					case 11:
+						this.p11=!this.p11;
+					break;	
+					case 12:
+						this.p12=!this.p12;
+					break;	
+					case 13:
+						this.p13=!this.p13;
+					break;	
+				
 				}
 				
 			},
@@ -429,11 +502,11 @@
 					if (status == '0') {
 						//TCP连接成功
 						that.showMsg('连接成功');
-						//console.log('通道:' + channel + '连接成功');
+						that.connected=true;
 					} else if (status == '1') {
 						//TCP断开连接
 						//that.showMsg('连接断开');
-						
+						that.connected=false;
 						//console.log('通道:' + channel + '断开连接');
 					}
 				};
@@ -535,17 +608,62 @@
 				});
 				
 			},
-			dialogToggle() {
-							
-						},
+			
+			connectWifi(wifi) {
+				console.log('选中的WiFi:', wifi);
+				
+				var that=this;
+				uni.connectWifi({
+					SSID: wifi,
+					password: '',
+					success: res => {
+						console.log('Wi-Fi连接成功:', res);
+					},
+					fail: err => {
+						that.showMsg('Wi-Fi连接失败'+ err.errMsg);
+						console.error('Wi-Fi连接失败:', err);
+					}
+				});
+			},
+			 
+			 
+			//获取当前连接的wifi
+			getConnectedWifi() {
+				var that=this
+				uni.getConnectedWifi({
+					success: res => {
+					var	connectedWifi = res.wifi; //当前连接的wifi的信息
+						//console.log(connectedWifi, "connectedWifi")
+						this.connectedWifiSSID = res.wifi.SSID;
+						console.log('已连接Wi-Fi:', res);
+						console.log('已连接Wi-Fi的SSID:', this.connectedWifiSSID);
+						this.wifiname=res.wifi.SSID;
+						this.connected=true;
+					},
+					fail: err => {
+						that.showMsg('Wi-Fi连接失败'+ err.errMsg);
+						console.error('获取已连接的Wi-Fi信息失败:', err);
+						this.connected=false;
+					}
+				});
+			},
+			
 			setwifi:function(){
 				var that=this;
+				if(this.getConnectedWifi()){
 				that.connectTCP();
 				   that.sendHexMsg1();
 				setInterval(function(){
 					that.sendHexMsg2();
 					
-				},500);
+				},500);	
+					
+				}else
+				{
+						this.$refs.inputDialog.open();
+						
+				}
+				
 			},
 			bindPickerChange: function(e) {
 			            console.log('picker发送选择改变，携带值为', e.detail.value)

@@ -8,7 +8,7 @@
 	<view>
 		<view class="row">
 			<uni-easyinput type="text" v-model="ssid" style="width: 80%;" placeholder="请输入姓名" />
-			<uni-icons type="paperplane" size="30"></uni-icons>
+			<!-- <uni-icons type="paperplane" size="30"></uni-icons> -->
 			
 		</view>
 		<view v-if="wifiList.length==0">
@@ -143,6 +143,9 @@
 						console.log('已连接Wi-Fi的SSID:', this.connectedWifiSSID);
 					},
 					fail: err => {
+						uni.showModal({
+							content:err.errMsg
+						})
 						console.error('获取已连接的Wi-Fi信息失败:', err);
 					}
 				});

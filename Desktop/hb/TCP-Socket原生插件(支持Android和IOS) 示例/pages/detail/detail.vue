@@ -10,29 +10,29 @@
 
 		<view class="uni-common-mt">
 			<view class="uni-form-item uni-column">
-				<view class="title" >管件ID：{{dd.id}}</view>
+				<view class="title" >管件/容器ID：{{dd.id}}</view>
 					</view>
 			<view class="uni-form-item uni-column">
-				<view class="title">管道名称：{{dd.ConName}}</view>
+				<view class="title">管件/容器名称：{{dd.ConName}}</view>
 					</view>
 			<view class="uni-form-item uni-column">
-				<view class="title">管件名称：{{dd.NumBer}}</view>
-					</view>
-			
-			<view class="uni-form-item uni-column">
-				<view class="title">管道规格：{{dd.GuandaoType}}</view>
+				<view class="title">管件/容器名称：{{dd.NumBer}}</view>
 					</view>
 			
 			<view class="uni-form-item uni-column">
-				<view class="title">管道级别：{{dd.GudandaoJibie}}</view>
+				<view class="title">管件/容器规格：{{dd.GuandaoType}}</view>
 					</view>
 			
 			<view class="uni-form-item uni-column">
-				<view class="title">管道材质：{{dd.Guandaocaizhi}}</view>
+				<view class="title">管件/容器级别：{{dd.GudandaoJibie}}</view>
 					</view>
 			
 			<view class="uni-form-item uni-column">
-				<view class="title">筒体厚度：{{dd.JiantiHoudu}}mm</view>
+				<view class="title">管件/容器材质：{{dd.Guandaocaizhi}}</view>
+					</view>
+			
+			<view class="uni-form-item uni-column">
+				<view class="title">管件/容器筒体厚度：{{dd.JiantiHoudu}}mm</view>
 					</view>
 			
 			<view class="uni-form-item uni-column">
@@ -48,6 +48,7 @@
 				<view class="title">图片：</view>
 				<image   :src="dd.Image"  mode="aspectFill"   style="margin-left: 5%;height: 300px;"></image>
 			</view>
+			<button style="background-color: orange;width: 80%;" @click="submit">查看委托</button>
 		</view>
 	</view>
 </template>
@@ -115,6 +116,12 @@
 			});	
 				
 				
+			},
+			submit:function(){
+				//uni.setStorageSync("ddid",this.dd.id);
+				uni.navigateTo({
+					url:'../task/task?gid='+this.dd.id
+				})
 			},
 			getInfo2:function(id){
 				var that =this;

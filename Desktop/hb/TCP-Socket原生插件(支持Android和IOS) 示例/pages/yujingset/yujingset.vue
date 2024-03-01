@@ -2,7 +2,7 @@
 	<view >
 				<uni-list @change="radioChange" v-model="yujingcheck">
 					<view class="uni-list-cell uni-list-cell-pd"  v-model="yujingcheck" v-for="item in yujingcheck" :key="item.value">
-						<view style="margin:20px;margin-left:40px;">
+						<view style="margin-left:40px;">
 							<uni-list-item :value="item.value" :checked="item.checked" />
 						{{item.name}}
 						</view>

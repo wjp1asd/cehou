@@ -104,7 +104,9 @@ export default {
 			 uni.navigateTo({
 			 	url:"../login/login"
 			 })
-		}
+		},
+		
+		
 	}
 }
 </script>

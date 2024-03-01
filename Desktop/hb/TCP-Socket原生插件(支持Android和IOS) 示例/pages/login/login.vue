@@ -152,13 +152,15 @@ export default {
 						
 					      this.data =res.data;
 						  uni.showModal({
-						  	content:this.data.message
+						  	content:this.data.person
 						  })
 						  if(this.data.message=="登录成功"){
-							  uni.setStorageSync("username",name);
-							  uni.reLaunch({
-							  	url:"../main/main"
-							  })
+							  
+							   uni.setStorageSync("username",name);
+							    uni.setStorageSync("user",this.data.person);
+							   uni.reLaunch({
+							   	url:"../main/main"
+							   })
 							  
 						  }
 						 
