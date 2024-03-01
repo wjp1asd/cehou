@@ -121,20 +121,41 @@
 						return;
 					}
 						that.data =res.data;
-					
-			      
+					for (var i = 0; i < res.data.length; i++) {
+						var str= res.data[i].wrtime;
+					   str=str.replace("/Date(","");
+								str= str.replace("000)/","");
+								var date = new Date(str * 1000);  // 参数需要毫秒数，所以这里将秒数乘于 1000
+								var Y = date.getFullYear() + '-';
+								var M = (date.getMonth()+1 < 10 ? '0'+(date.getMonth()+1) : date.getMonth()+1) + '-';
+								var D = date.getDate() + ' ';
+								var h = date.getHours() + ':';
+								var m = date.getMinutes() + ':';
+								var s = date.getSeconds();
+								
+								res.data[i].wrtime =Y+M+D+h+m+s;
+			      }
 			    }
 			});			
 				
 			},
 			showff:function(e){
 			
-			
-			
+			var user =uni.getStorageSync("user");
 			uni.setStorageSync("temdata",e);
+			if(e.Jianyanren!=JSON.parse(user).usrname){
+				
+			uni.showModal({
+				content:"检验人身份不符合",
+				
+			})	
+			//return;
+			} else{
+			
 			uni.navigateTo({
 				url:"../cedian/cedian"
-			})	
+			})		
+			}
 				
 			},
 			scan:function(e){

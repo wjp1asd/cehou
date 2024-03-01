@@ -122,15 +122,20 @@
 						that.data =res.data;
 	     for (var i = 0; i < res.data.length; i++) {
 	     	var str= res.data[i].wrtime;
-		 str=	str.replace("/Date(","");
+		    str=str.replace("/Date(","");
 			str= str.replace("000)/","");
-			uni.showModal({
-				content:str
-			})
-			//const date = new Date(str);
-			const date = new Date(1704109572);
-			const dateString =date.getFullYear();
-			  
+			var date = new Date(str * 1000);  // 参数需要毫秒数，所以这里将秒数乘于 1000
+			var Y = date.getFullYear() + '-';
+			var M = (date.getMonth()+1 < 10 ? '0'+(date.getMonth()+1) : date.getMonth()+1) + '-';
+			var D = date.getDate() + ' ';
+			var h = date.getHours() + ':';
+			var m = date.getMinutes() + ':';
+			var s = date.getSeconds();
+			
+			res.data[i].wrtime =Y+M+D+h+m+s;
+			//document.write(Y+M+D+h+m+s)
+			
+			
 			//res.data[i].wrtime =dateString;
 	     }
 			      
