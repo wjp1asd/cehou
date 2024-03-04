@@ -151,9 +151,9 @@ export default {
 					    success: (res) => {
 						
 					      this.data =res.data;
-						  uni.showModal({
-						  	content:this.data.person
-						  })
+						  // uni.showModal({
+						  // 	content:this.data.person
+						  // })
 						  if(this.data.message=="登录成功"){
 							  
 							   uni.setStorageSync("username",name);

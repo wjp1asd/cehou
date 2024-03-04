@@ -122,6 +122,7 @@
 						that.data =res.data;
 	     for (var i = 0; i < res.data.length; i++) {
 	     	var str= res.data[i].wrtime;
+			//res.data[i].wrtime1 =str;
 		    str=str.replace("/Date(","");
 			str= str.replace("000)/","");
 			var date = new Date(str * 1000);  // 参数需要毫秒数，所以这里将秒数乘于 1000
@@ -131,7 +132,7 @@
 			var h = date.getHours() + ':';
 			var m = date.getMinutes() + ':';
 			var s = date.getSeconds();
-			
+			res.data[i].wrtime1 =date;
 			res.data[i].wrtime =Y+M+D+h+m+s;
 			//document.write(Y+M+D+h+m+s)
 			

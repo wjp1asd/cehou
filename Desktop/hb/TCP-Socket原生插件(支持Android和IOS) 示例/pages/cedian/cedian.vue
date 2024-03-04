@@ -58,8 +58,12 @@
 			</view>
 			<view class="uni-form-item uni-column">
 			
-				<view class="title">测点编号1：{{item.Mpref1}}</view>
-				<!-- <input class="uni-input" v-model="item.Mpref1"  disabled="true" placeholder="请链接测厚仪读值" /> -->
+				<view class="title">
+				<text>测点编号1：{{item.Mpref1}}</text>  
+				<text>测点编号2：{{item.Mpref1}}</text>
+				
+				</view>
+					<!-- <input class="uni-input" v-model="item.Mpref1"  disabled="true" placeholder="请链接测厚仪读值" /> -->
 			   	
 			</view>
 			<view class="uni-form-item uni-column">
@@ -248,6 +252,8 @@ placeholder="请输入内容" @confirm="dialogInputConfirm"></uni-popup-dialog>
 			
 			return {
 			 item:{},
+			 item1:{},
+			 url:'api.ashx?do=task1',
 			 array: ['中国', '美国', '巴西', '日本'],	
 			 ip: '192.168.1.1',
 			 port: '8899',
@@ -294,6 +300,8 @@ placeholder="请输入内容" @confirm="dialogInputConfirm"></uni-popup-dialog>
 		onLoad() {
 			
 			var item =uni.getStorageSync("temdata");
+			this.item=item;
+			this.lk();
 			var that=this;
 			uni.startWifi({
 				success: res => {
@@ -305,12 +313,49 @@ placeholder="请输入内容" @confirm="dialogInputConfirm"></uni-popup-dialog>
 					console.error('Wi-Fiinit失败:', err);
 				}
 			});
-			this.item=item;
+			
+			
 			let newStr = item.WT_pho.replace("~/", "");
 			item.WT_pho =uni.getStorageSync("backurl")+newStr ;
-			
+			// 获取上次数据
+			//http://localhost:5918/api.ashx?do=task1&GJNO=20231212001&wrtime=2024-01-21%2021:0:39
+			//http://localhost:5918/api.ashx?do=task1?GJNO=20231212001&wrtime=2024-02-21%2021:0:39
 		},
 		methods: {
+		lk:function(){
+			var that =this;
+			// if(that.ssid.length==0){
+			// 	return
+			// }
+			var xx=uni.getStorageSync("backurl")+this.url+"&GJNO="+this.item.GJNo+"&wrtime="+this.item.wrtime.slice(0,10);
+	
+		uni.request({
+		    url: xx, //仅为示例，并非真实接口地址。
+		    data: {
+		    
+		    },
+		    header: {
+		        'custom-header': 'hello' //自定义请求头信息
+		    },
+		    success: (res) => {
+				console.log(res);
+				if(res.data.length==0){
+				  uni.showModal({
+				  	content:"暂无匹配数据"
+				  })
+					return;
+				}
+				uni.showModal({
+					content:res.data[0]
+				})
+				that.item1 =res.data[0];
+				uni.showModal({
+					content:that.item1
+				})
+		}
+		});			
+			
+		},
 			dialogInputConfirm(val) {
 							uni.showLoading({
 								title: '3秒后会关闭'
