@@ -60,7 +60,7 @@
 			
 				<view class="title">
 				<text>测点编号1：{{item.Mpref1}}</text>  
-				<text>测点编号2：{{item.Mpref1}}</text>
+				<text style="margin-left:10px;">上次测点编号1：{{item1.Mptkns1}}</text>
 				
 				</view>
 					<!-- <input class="uni-input" v-model="item.Mpref1"  disabled="true" placeholder="请链接测厚仪读值" /> -->
@@ -77,7 +77,11 @@
 				
 			</view>
 			<view class="uni-form-item uni-column">
-				<view class="title">测点编号2：{{item.Mpref2}}</view>
+				<view class="title">
+				<text>测点编号2：{{item.Mpref2}}</text>  
+				<text style="margin-left:10px;">上次测点编号2：{{item1.Mptkns2}}</text>
+				
+				</view>
 				<!-- <input class="uni-input" v-model="item.Mpref2"  disabled="true"   placeholder="请链接测厚仪读值" /> -->
 			</view>
 			<view class="uni-form-item uni-column">
@@ -91,7 +95,11 @@
 			
 			</view>
 			<view class="uni-form-item uni-column">
-				<view class="title">测点编号3：{{item.Mpref3}}</view>
+				<view class="title">
+				<text>测点编号3：{{item.Mpref3}}</text>  
+				<text style="margin-left:10px;">上次测点编号3：{{item1.Mptkns3}}</text>
+				
+				</view>
 				<!-- <input class="uni-input" v-model="item.Mpref3" disabled="true"  placeholder="请链接测厚仪读值" /> -->
 			</view>
 			<view class="uni-form-item uni-column">
@@ -103,7 +111,11 @@
 			</button>
 			</view>	</view>
 			<view class="uni-form-item uni-column">
-				<view class="title">测点编号4：{{item.Mpref4}}</view>
+				<view class="title">
+				<text>测点编号4：{{item.Mpref4}}</text>  
+				<text style="margin-left:10px;">上次测点编号4：{{item1.Mptkns4}}</text>
+				
+				</view>
 				<!-- <input class="uni-input" v-model="item.Mpref4"  disabled="true"  placeholder="请链接测厚仪读值" /> -->
 			</view>
 			<view class="uni-form-item uni-column">
@@ -115,7 +127,11 @@
 			</button>
 			</view></view>
 			<view class="uni-form-item uni-column">
-				<view class="title">测点编号5：{{item.Mpref5}}</view>
+			<view class="title">
+			<text>测点编号5：{{item.Mpref5}}</text>  
+			<text style="margin-left:10px;">上次测点编号5：{{item1.Mptkns5}}</text>
+			
+			</view>
 				<!-- <input class="uni-input" v-model="item.Mpref5"  disabled="true"  placeholder="请链接测厚仪读值" /> -->
 			</view>
 			<view class="uni-form-item uni-column">
@@ -127,7 +143,11 @@
 			</button>
 			</view></view>
 			<view class="uni-form-item uni-column">
-				<view class="title">测点编号6：{{item.Mpref6}}</view>
+				<view class="title">
+				<text>测点编号6：{{item.Mpref6}}</text>  
+				<text style="margin-left:10px;">上次测点编号6：{{item1.Mptkns6}}</text>
+				
+				</view>
 				<!-- <input class="uni-input" v-model="item.Mpref6"  disabled="true"  placeholder="请链接测厚仪读值" /> -->
 			</view>
 			<view class="uni-form-item uni-column">
@@ -139,7 +159,11 @@
 			</button>
 			</view></view>
 			<view class="uni-form-item uni-column">
-				<view class="title">测点编号7：{{item.Mpref7}}</view>
+			<view class="title">
+			<text>测点编号7：{{item.Mpref7}}</text>  
+			<text style="margin-left:10px;">上次测点编号7：{{item1.Mptkns7}}</text>
+			
+			</view>
 				<!-- <input class="uni-input" v-model="item.Mpref7"  disabled="true"  placeholder="请链接测厚仪读值" /> -->
 			</view>
 			<view class="uni-form-item uni-column">
@@ -151,7 +175,11 @@
 			</button>
 			</view></view>
 			<view class="uni-form-item uni-column">
-				<view class="title">测点编号8：{{item.Mpref8}}</view>
+				<view class="title">
+				<text>测点编号8：{{item.Mpref8}}</text>  
+				<text style="margin-left:10px;">上次测点编号8：{{item1.Mptkns8}}</text>
+				
+				</view>
 				<!-- <input class="uni-input" v-model="item.Mpref8"  disabled="true"  placeholder="请链接测厚仪读值" /> -->
 			</view>
 			<view class="uni-form-item uni-column">
@@ -163,7 +191,11 @@
 				</button>
 				</view>	</view>
 			<view class="uni-form-item uni-column">
-				<view class="title">测点编号9：{{item.Mpref9}}</view>
+			<view class="title">
+			<text>测点编号9：{{item.Mpref9}}</text>  
+			<text style="margin-left:10px;">上次测点编号1：{{item1.Mptkns9}}</text>
+			
+			</view>
 				<!-- <input class="uni-input"v-model="item.Mpref9"  disabled="true"  placeholder="请链接测厚仪读值" /> -->
 			</view>
 			<view class="uni-form-item uni-column">
@@ -174,7 +206,11 @@
 				<button @click="lock(9)" >{{p9?"锁定":"未锁定"}}
 				</button>
 				</view></view>	<view class="uni-form-item uni-column">
-				<view class="title">测点编号10：{{item.Mpref10}}</view>
+				<view class="title">
+				<text>测点编号10：{{item.Mpref10}}</text>  
+				<text style="margin-left:10px;">上次测点编号1：{{item1.Mptkns10}}</text>
+				
+				</view>
 				<!-- <input class="uni-input" v-model="item.Mpref10"  disabled="true"  placeholder="请链接测厚仪读值" /> -->
 			</view>
 			<view class="uni-form-item uni-column">
@@ -186,7 +222,11 @@
 			</button>
 			</view ></view>
 <view class="uni-form-item uni-column">
-				<view class="title">测点编号11：{{item.Mpref11}}</view>
+			<view class="title">
+			<text>测点编号11：{{item.Mpref11}}</text>  
+			<text style="margin-left:10px;">上次测点编号11：{{item1.Mptkns11}}</text>
+			
+			</view>
 				<!-- <input class="uni-input"v-model="item.Mpref11"  disabled="true"  placeholder="请链接测厚仪读值" /> -->
 			</view>
 	<view class="uni-form-item uni-column">
@@ -199,7 +239,11 @@
 			</view >
 </view>
 <view class="uni-form-item uni-column">
-				<view class="title">测点编号12：{{item.Mpref12}}</view>
+				<view class="title">
+				<text>测点编号12：{{item.Mpref12}}</text>  
+				<text style="margin-left:10px;">上次测点编号12：{{item1.Mptkns12}}</text>
+				
+				</view>
 				<!-- <input class="uni-input"v-model="item.Mpref12"  disabled="true"  placeholder="请链接测厚仪读值" /> -->
 			</view>
 	<view class="uni-form-item uni-column">
@@ -212,7 +256,11 @@
 			</view >
 			</view>
 	<view class="uni-form-item uni-column">
-		<view class="title">测点编号13：{{item.Mpref13}}</view>
+		<view class="title">
+		<text>测点编号13：{{item.Mpref13}}</text>  
+		<text style="margin-left:10px;">上次测点编号13：{{item1.Mptkns13}}</text>
+		
+		</view>
 		<!-- <input class="uni-input"v-model="item.Mpref13"  disabled="true"  placeholder="请链接测厚仪读值" /> -->
 	</view>
 	<view class="uni-form-item uni-column">
@@ -259,19 +307,19 @@ placeholder="请输入内容" @confirm="dialogInputConfirm"></uni-popup-dialog>
 			 port: '8899',
 			 message: '你好啊',
 			 nowvalue:0,
-			  nowvalue1:0,
-			   nowvalue2:0,
-			    nowvalue3:0,
-				 nowvalue4:0,
-				  nowvalue5:0,
-				   nowvalue6:0,
-				    nowvalue7:0,
-					 nowvalue8:0,
-					nowvalue9:0,
-					 nowvalue10:0, 
-					 nowvalue11:0,
-					  nowvalue12:0,
-					  nowvalue13:0,
+			 nowvalue1:0,
+			 nowvalue2:0,
+			 nowvalue3:0,
+			 nowvalue4:0,
+			 nowvalue5:0,
+			 nowvalue6:0,
+			 nowvalue7:0,
+			 nowvalue8:0,
+			 nowvalue9:0,
+			 nowvalue10:0, 
+			 nowvalue11:0,
+			 nowvalue12:0,
+			 nowvalue13:0,
 			 wifiname:"USR-232",
 		     connected:false,
 			 channel: '1',
@@ -294,7 +342,7 @@ placeholder="请输入内容" @confirm="dialogInputConfirm"></uni-popup-dialog>
 			 p11:false,
 			 p12:false,
 			 p13:false,
-			 
+			 yujing:0.2
 			}
 		},
 		onLoad() {
@@ -302,6 +350,7 @@ placeholder="请输入内容" @confirm="dialogInputConfirm"></uni-popup-dialog>
 			var item =uni.getStorageSync("temdata");
 			this.item=item;
 			this.lk();
+			
 			var that=this;
 			uni.startWifi({
 				success: res => {
@@ -314,12 +363,12 @@ placeholder="请输入内容" @confirm="dialogInputConfirm"></uni-popup-dialog>
 				}
 			});
 			
+			if(item.WT_pho.length>0){
+				let newStr = item.WT_pho.replace("~/", "");
+				item.WT_pho =uni.getStorageSync("backurl")+newStr ;
+			}
 			
-			let newStr = item.WT_pho.replace("~/", "");
-			item.WT_pho =uni.getStorageSync("backurl")+newStr ;
-			// 获取上次数据
-			//http://localhost:5918/api.ashx?do=task1&GJNO=20231212001&wrtime=2024-01-21%2021:0:39
-			//http://localhost:5918/api.ashx?do=task1?GJNO=20231212001&wrtime=2024-02-21%2021:0:39
+			
 		},
 		methods: {
 		lk:function(){
@@ -349,9 +398,7 @@ placeholder="请输入内容" @confirm="dialogInputConfirm"></uni-popup-dialog>
 					content:res.data[0]
 				})
 				that.item1 =res.data[0];
-				uni.showModal({
-					content:that.item1
-				})
+				
 		}
 		});			
 			
@@ -449,49 +496,69 @@ placeholder="请输入内容" @confirm="dialogInputConfirm"></uni-popup-dialog>
 					url:"../detail/detail"
 				})
 			},
-			
+			yujing:function(a,b){
+				if(a>b*this.yujing){
+					
+					return uni.showToast({
+						title:"预警报告：腐蚀率过高"+this.yujing
+					})
+				}
+				
+			},
 			lock:function(index){
 				
 				switch(index){
 				case 1:
 					this.p1=!this.p1;
-				
+				   this.yujing(this.nowvalue1,this.item1.Mptkns1)
 				break;	
 				case 2:
 					this.p2=!this.p2;
+					 this.yujing(this.nowvalue2,this.item1.Mptkns2)
 				break;	
 					case 3:
 						this.p3=!this.p3;
+					 this.yujing(this.nowvalue3,this.item1.Mptkns3)	
 					break;	
 					case 4:
 						this.p4=!this.p4;
+					 this.yujing(this.nowvalue4,this.item1.Mptkns4)	
 					break;	
 					case 5:
 						this.p5=!this.p5;
+						 this.yujing(this.nowvalue5,this.item1.Mptkns5)
 					break;	
 					case 6:
 						this.p6=!this.p6;
+						 this.yujing(this.nowvalue6,this.item1.Mptkns6)
 					break;	
 					case 7:
 						this.p7=!this.p7;
+						 this.yujing(this.nowvalue7,this.item1.Mptkns7)
 					break;	
 					case 8:
 						this.p8=!this.p8;
+						 this.yujing(this.nowvalue8,this.item1.Mptkns8)
 					break;	
 					case 9:
 						this.p9=!this.p9;
+						 this.yujing(this.nowvalue9,this.item1.Mptkns9)
 					break;	
 					case 10:
 						this.p10=!this.p10;
+						 this.yujing(this.nowvalue10,this.item1.Mptkns10)
 					break;	
 					case 11:
 						this.p11=!this.p11;
+						 this.yujing(this.nowvalue11,this.item1.Mptkns11)
 					break;	
 					case 12:
 						this.p12=!this.p12;
+						 this.yujing(this.nowvalue12,this.item1.Mptkns12)
 					break;	
 					case 13:
 						this.p13=!this.p13;
+						 this.yujing(this.nowvalue13,this.item1.Mptkns13)
 					break;	
 				
 				}

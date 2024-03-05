@@ -4467,9 +4467,14 @@ var render = function () {
                   _c("v-uni-text", { attrs: { _i: 22 } }, [
                     _vm._v("测点编号1：" + _vm._$g(22, "t0-0")),
                   ]),
-                  _c("v-uni-text", { attrs: { _i: 23 } }, [
-                    _vm._v("测点编号2：" + _vm._$g(23, "t0-0")),
-                  ]),
+                  _c(
+                    "v-uni-text",
+                    {
+                      staticStyle: { "margin-left": "10px" },
+                      attrs: { _i: 23 },
+                    },
+                    [_vm._v("上次测点编号1：" + _vm._$g(23, "t0-0"))]
+                  ),
                 ],
                 1
               ),
@@ -4529,50 +4534,17 @@ var render = function () {
               _c(
                 "uni-view",
                 { staticClass: _vm._$g(30, "sc"), attrs: { _i: 30 } },
-                [_vm._v("测点编号2：" + _vm._$g(30, "t0-0"))]
-              ),
-            ],
-            1
-          ),
-          _c(
-            "uni-view",
-            { staticClass: _vm._$g(31, "sc"), attrs: { _i: 31 } },
-            [
-              _c(
-                "uni-view",
-                { staticClass: _vm._$g(32, "sc"), attrs: { _i: 32 } },
                 [
+                  _c("v-uni-text", { attrs: { _i: 31 } }, [
+                    _vm._v("测点编号2：" + _vm._$g(31, "t0-0")),
+                  ]),
                   _c(
-                    "uni-view",
-                    { staticClass: _vm._$g(33, "sc"), attrs: { _i: 33 } },
-                    [_vm._v("测点厚度2：")]
-                  ),
-                  _c("v-uni-input", {
-                    staticClass: _vm._$g(34, "sc"),
-                    attrs: {
-                      disabled: _vm._$g(34, "a-disabled"),
-                      placeholder: "请链接测厚仪读值",
-                      _i: 34,
-                    },
-                    model: {
-                      value: _vm._$g(34, "v-model"),
-                      callback: function ($$v) {
-                        _vm.$handleVModelEvent(34, $$v)
-                      },
-                      expression: "nowvalue2",
-                    },
-                  }),
-                  _c(
-                    "v-uni-button",
+                    "v-uni-text",
                     {
-                      attrs: { _i: 35 },
-                      on: {
-                        click: function ($event) {
-                          return _vm.$handleViewEvent($event)
-                        },
-                      },
+                      staticStyle: { "margin-left": "10px" },
+                      attrs: { _i: 32 },
                     },
-                    [_vm._v(_vm._$g(35, "t0-0"))]
+                    [_vm._v("上次测点编号2：" + _vm._$g(32, "t0-0"))]
                   ),
                 ],
                 1
@@ -4582,12 +4554,46 @@ var render = function () {
           ),
           _c(
             "uni-view",
-            { staticClass: _vm._$g(36, "sc"), attrs: { _i: 36 } },
+            { staticClass: _vm._$g(33, "sc"), attrs: { _i: 33 } },
             [
               _c(
                 "uni-view",
-                { staticClass: _vm._$g(37, "sc"), attrs: { _i: 37 } },
-                [_vm._v("测点编号3：" + _vm._$g(37, "t0-0"))]
+                { staticClass: _vm._$g(34, "sc"), attrs: { _i: 34 } },
+                [
+                  _c(
+                    "uni-view",
+                    { staticClass: _vm._$g(35, "sc"), attrs: { _i: 35 } },
+                    [_vm._v("测点厚度2：")]
+                  ),
+                  _c("v-uni-input", {
+                    staticClass: _vm._$g(36, "sc"),
+                    attrs: {
+                      disabled: _vm._$g(36, "a-disabled"),
+                      placeholder: "请链接测厚仪读值",
+                      _i: 36,
+                    },
+                    model: {
+                      value: _vm._$g(36, "v-model"),
+                      callback: function ($$v) {
+                        _vm.$handleVModelEvent(36, $$v)
+                      },
+                      expression: "nowvalue2",
+                    },
+                  }),
+                  _c(
+                    "v-uni-button",
+                    {
+                      attrs: { _i: 37 },
+                      on: {
+                        click: function ($event) {
+                          return _vm.$handleViewEvent($event)
+                        },
+                      },
+                    },
+                    [_vm._v(_vm._$g(37, "t0-0"))]
+                  ),
+                ],
+                1
               ),
             ],
             1
@@ -4600,22 +4606,47 @@ var render = function () {
                 "uni-view",
                 { staticClass: _vm._$g(39, "sc"), attrs: { _i: 39 } },
                 [
+                  _c("v-uni-text", { attrs: { _i: 40 } }, [
+                    _vm._v("测点编号3：" + _vm._$g(40, "t0-0")),
+                  ]),
+                  _c(
+                    "v-uni-text",
+                    {
+                      staticStyle: { "margin-left": "10px" },
+                      attrs: { _i: 41 },
+                    },
+                    [_vm._v("上次测点编号3：" + _vm._$g(41, "t0-0"))]
+                  ),
+                ],
+                1
+              ),
+            ],
+            1
+          ),
+          _c(
+            "uni-view",
+            { staticClass: _vm._$g(42, "sc"), attrs: { _i: 42 } },
+            [
+              _c(
+                "uni-view",
+                { staticClass: _vm._$g(43, "sc"), attrs: { _i: 43 } },
+                [
                   _c(
                     "uni-view",
-                    { staticClass: _vm._$g(40, "sc"), attrs: { _i: 40 } },
+                    { staticClass: _vm._$g(44, "sc"), attrs: { _i: 44 } },
                     [_vm._v("测点厚度3：")]
                   ),
                   _c("v-uni-input", {
-                    staticClass: _vm._$g(41, "sc"),
+                    staticClass: _vm._$g(45, "sc"),
                     attrs: {
-                      disabled: _vm._$g(41, "a-disabled"),
+                      disabled: _vm._$g(45, "a-disabled"),
                       placeholder: "请链接测厚仪读值",
-                      _i: 41,
+                      _i: 45,
                     },
                     model: {
-                      value: _vm._$g(41, "v-model"),
+                      value: _vm._$g(45, "v-model"),
                       callback: function ($$v) {
-                        _vm.$handleVModelEvent(41, $$v)
+                        _vm.$handleVModelEvent(45, $$v)
                       },
                       expression: "nowvalue3",
                     },
@@ -4623,14 +4654,14 @@ var render = function () {
                   _c(
                     "v-uni-button",
                     {
-                      attrs: { _i: 42 },
+                      attrs: { _i: 46 },
                       on: {
                         click: function ($event) {
                           return _vm.$handleViewEvent($event)
                         },
                       },
                     },
-                    [_vm._v(_vm._$g(42, "t0-0"))]
+                    [_vm._v(_vm._$g(46, "t0-0"))]
                   ),
                 ],
                 1
@@ -4640,40 +4671,53 @@ var render = function () {
           ),
           _c(
             "uni-view",
-            { staticClass: _vm._$g(43, "sc"), attrs: { _i: 43 } },
+            { staticClass: _vm._$g(47, "sc"), attrs: { _i: 47 } },
             [
               _c(
                 "uni-view",
-                { staticClass: _vm._$g(44, "sc"), attrs: { _i: 44 } },
-                [_vm._v("测点编号4：" + _vm._$g(44, "t0-0"))]
+                { staticClass: _vm._$g(48, "sc"), attrs: { _i: 48 } },
+                [
+                  _c("v-uni-text", { attrs: { _i: 49 } }, [
+                    _vm._v("测点编号4：" + _vm._$g(49, "t0-0")),
+                  ]),
+                  _c(
+                    "v-uni-text",
+                    {
+                      staticStyle: { "margin-left": "10px" },
+                      attrs: { _i: 50 },
+                    },
+                    [_vm._v("上次测点编号4：" + _vm._$g(50, "t0-0"))]
+                  ),
+                ],
+                1
               ),
             ],
             1
           ),
           _c(
             "uni-view",
-            { staticClass: _vm._$g(45, "sc"), attrs: { _i: 45 } },
+            { staticClass: _vm._$g(51, "sc"), attrs: { _i: 51 } },
             [
               _c(
                 "uni-view",
-                { staticClass: _vm._$g(46, "sc"), attrs: { _i: 46 } },
+                { staticClass: _vm._$g(52, "sc"), attrs: { _i: 52 } },
                 [
                   _c(
                     "uni-view",
-                    { staticClass: _vm._$g(47, "sc"), attrs: { _i: 47 } },
+                    { staticClass: _vm._$g(53, "sc"), attrs: { _i: 53 } },
                     [_vm._v("测点厚度4：")]
                   ),
                   _c("v-uni-input", {
-                    staticClass: _vm._$g(48, "sc"),
+                    staticClass: _vm._$g(54, "sc"),
                     attrs: {
-                      disabled: _vm._$g(48, "a-disabled"),
+                      disabled: _vm._$g(54, "a-disabled"),
                       placeholder: "请链接测厚仪读值",
-                      _i: 48,
+                      _i: 54,
                     },
                     model: {
-                      value: _vm._$g(48, "v-model"),
+                      value: _vm._$g(54, "v-model"),
                       callback: function ($$v) {
-                        _vm.$handleVModelEvent(48, $$v)
+                        _vm.$handleVModelEvent(54, $$v)
                       },
                       expression: "nowvalue4",
                     },
@@ -4681,14 +4725,14 @@ var render = function () {
                   _c(
                     "v-uni-button",
                     {
-                      attrs: { _i: 49 },
+                      attrs: { _i: 55 },
                       on: {
                         click: function ($event) {
                           return _vm.$handleViewEvent($event)
                         },
                       },
                     },
-                    [_vm._v(_vm._$g(49, "t0-0"))]
+                    [_vm._v(_vm._$g(55, "t0-0"))]
                   ),
                 ],
                 1
@@ -4698,40 +4742,53 @@ var render = function () {
           ),
           _c(
             "uni-view",
-            { staticClass: _vm._$g(50, "sc"), attrs: { _i: 50 } },
+            { staticClass: _vm._$g(56, "sc"), attrs: { _i: 56 } },
             [
               _c(
                 "uni-view",
-                { staticClass: _vm._$g(51, "sc"), attrs: { _i: 51 } },
-                [_vm._v("测点编号5：" + _vm._$g(51, "t0-0"))]
+                { staticClass: _vm._$g(57, "sc"), attrs: { _i: 57 } },
+                [
+                  _c("v-uni-text", { attrs: { _i: 58 } }, [
+                    _vm._v("测点编号5：" + _vm._$g(58, "t0-0")),
+                  ]),
+                  _c(
+                    "v-uni-text",
+                    {
+                      staticStyle: { "margin-left": "10px" },
+                      attrs: { _i: 59 },
+                    },
+                    [_vm._v("上次测点编号5：" + _vm._$g(59, "t0-0"))]
+                  ),
+                ],
+                1
               ),
             ],
             1
           ),
           _c(
             "uni-view",
-            { staticClass: _vm._$g(52, "sc"), attrs: { _i: 52 } },
+            { staticClass: _vm._$g(60, "sc"), attrs: { _i: 60 } },
             [
               _c(
                 "uni-view",
-                { staticClass: _vm._$g(53, "sc"), attrs: { _i: 53 } },
+                { staticClass: _vm._$g(61, "sc"), attrs: { _i: 61 } },
                 [
                   _c(
                     "uni-view",
-                    { staticClass: _vm._$g(54, "sc"), attrs: { _i: 54 } },
+                    { staticClass: _vm._$g(62, "sc"), attrs: { _i: 62 } },
                     [_vm._v("测点厚度5：")]
                   ),
                   _c("v-uni-input", {
-                    staticClass: _vm._$g(55, "sc"),
+                    staticClass: _vm._$g(63, "sc"),
                     attrs: {
-                      disabled: _vm._$g(55, "a-disabled"),
+                      disabled: _vm._$g(63, "a-disabled"),
                       placeholder: "请链接测厚仪读值",
-                      _i: 55,
+                      _i: 63,
                     },
                     model: {
-                      value: _vm._$g(55, "v-model"),
+                      value: _vm._$g(63, "v-model"),
                       callback: function ($$v) {
-                        _vm.$handleVModelEvent(55, $$v)
+                        _vm.$handleVModelEvent(63, $$v)
                       },
                       expression: "nowvalue5",
                     },
@@ -4739,14 +4796,14 @@ var render = function () {
                   _c(
                     "v-uni-button",
                     {
-                      attrs: { _i: 56 },
+                      attrs: { _i: 64 },
                       on: {
                         click: function ($event) {
                           return _vm.$handleViewEvent($event)
                         },
                       },
                     },
-                    [_vm._v(_vm._$g(56, "t0-0"))]
+                    [_vm._v(_vm._$g(64, "t0-0"))]
                   ),
                 ],
                 1
@@ -4756,40 +4813,53 @@ var render = function () {
           ),
           _c(
             "uni-view",
-            { staticClass: _vm._$g(57, "sc"), attrs: { _i: 57 } },
+            { staticClass: _vm._$g(65, "sc"), attrs: { _i: 65 } },
             [
               _c(
                 "uni-view",
-                { staticClass: _vm._$g(58, "sc"), attrs: { _i: 58 } },
-                [_vm._v("测点编号6：" + _vm._$g(58, "t0-0"))]
+                { staticClass: _vm._$g(66, "sc"), attrs: { _i: 66 } },
+                [
+                  _c("v-uni-text", { attrs: { _i: 67 } }, [
+                    _vm._v("测点编号6：" + _vm._$g(67, "t0-0")),
+                  ]),
+                  _c(
+                    "v-uni-text",
+                    {
+                      staticStyle: { "margin-left": "10px" },
+                      attrs: { _i: 68 },
+                    },
+                    [_vm._v("上次测点编号6：" + _vm._$g(68, "t0-0"))]
+                  ),
+                ],
+                1
               ),
             ],
             1
           ),
           _c(
             "uni-view",
-            { staticClass: _vm._$g(59, "sc"), attrs: { _i: 59 } },
+            { staticClass: _vm._$g(69, "sc"), attrs: { _i: 69 } },
             [
               _c(
                 "uni-view",
-                { staticClass: _vm._$g(60, "sc"), attrs: { _i: 60 } },
+                { staticClass: _vm._$g(70, "sc"), attrs: { _i: 70 } },
                 [
                   _c(
                     "uni-view",
-                    { staticClass: _vm._$g(61, "sc"), attrs: { _i: 61 } },
+                    { staticClass: _vm._$g(71, "sc"), attrs: { _i: 71 } },
                     [_vm._v("测点厚度6：")]
                   ),
                   _c("v-uni-input", {
-                    staticClass: _vm._$g(62, "sc"),
+                    staticClass: _vm._$g(72, "sc"),
                     attrs: {
-                      disabled: _vm._$g(62, "a-disabled"),
+                      disabled: _vm._$g(72, "a-disabled"),
                       placeholder: "请链接测厚仪读值",
-                      _i: 62,
+                      _i: 72,
                     },
                     model: {
-                      value: _vm._$g(62, "v-model"),
+                      value: _vm._$g(72, "v-model"),
                       callback: function ($$v) {
-                        _vm.$handleVModelEvent(62, $$v)
+                        _vm.$handleVModelEvent(72, $$v)
                       },
                       expression: "nowvalue6",
                     },
@@ -4797,14 +4867,14 @@ var render = function () {
                   _c(
                     "v-uni-button",
                     {
-                      attrs: { _i: 63 },
+                      attrs: { _i: 73 },
                       on: {
                         click: function ($event) {
                           return _vm.$handleViewEvent($event)
                         },
                       },
                     },
-                    [_vm._v(_vm._$g(63, "t0-0"))]
+                    [_vm._v(_vm._$g(73, "t0-0"))]
                   ),
                 ],
                 1
@@ -4814,113 +4884,22 @@ var render = function () {
           ),
           _c(
             "uni-view",
-            { staticClass: _vm._$g(64, "sc"), attrs: { _i: 64 } },
+            { staticClass: _vm._$g(74, "sc"), attrs: { _i: 74 } },
             [
               _c(
                 "uni-view",
-                { staticClass: _vm._$g(65, "sc"), attrs: { _i: 65 } },
-                [_vm._v("测点编号7：" + _vm._$g(65, "t0-0"))]
-              ),
-            ],
-            1
-          ),
-          _c(
-            "uni-view",
-            { staticClass: _vm._$g(66, "sc"), attrs: { _i: 66 } },
-            [
-              _c(
-                "uni-view",
-                { staticClass: _vm._$g(67, "sc"), attrs: { _i: 67 } },
+                { staticClass: _vm._$g(75, "sc"), attrs: { _i: 75 } },
                 [
+                  _c("v-uni-text", { attrs: { _i: 76 } }, [
+                    _vm._v("测点编号7：" + _vm._$g(76, "t0-0")),
+                  ]),
                   _c(
-                    "uni-view",
-                    { staticClass: _vm._$g(68, "sc"), attrs: { _i: 68 } },
-                    [_vm._v("测点厚度7：")]
-                  ),
-                  _c("v-uni-input", {
-                    staticClass: _vm._$g(69, "sc"),
-                    attrs: {
-                      disabled: _vm._$g(69, "a-disabled"),
-                      placeholder: "请链接测厚仪读值",
-                      _i: 69,
-                    },
-                    model: {
-                      value: _vm._$g(69, "v-model"),
-                      callback: function ($$v) {
-                        _vm.$handleVModelEvent(69, $$v)
-                      },
-                      expression: "nowvalue7",
-                    },
-                  }),
-                  _c(
-                    "v-uni-button",
+                    "v-uni-text",
                     {
-                      attrs: { _i: 70 },
-                      on: {
-                        click: function ($event) {
-                          return _vm.$handleViewEvent($event)
-                        },
-                      },
-                    },
-                    [_vm._v(_vm._$g(70, "t0-0"))]
-                  ),
-                ],
-                1
-              ),
-            ],
-            1
-          ),
-          _c(
-            "uni-view",
-            { staticClass: _vm._$g(71, "sc"), attrs: { _i: 71 } },
-            [
-              _c(
-                "uni-view",
-                { staticClass: _vm._$g(72, "sc"), attrs: { _i: 72 } },
-                [_vm._v("测点编号8：" + _vm._$g(72, "t0-0"))]
-              ),
-            ],
-            1
-          ),
-          _c(
-            "uni-view",
-            { staticClass: _vm._$g(73, "sc"), attrs: { _i: 73 } },
-            [
-              _c(
-                "uni-view",
-                { staticClass: _vm._$g(74, "sc"), attrs: { _i: 74 } },
-                [
-                  _c(
-                    "uni-view",
-                    { staticClass: _vm._$g(75, "sc"), attrs: { _i: 75 } },
-                    [_vm._v("测点厚度8：")]
-                  ),
-                  _c("v-uni-input", {
-                    staticClass: _vm._$g(76, "sc"),
-                    attrs: {
-                      disabled: _vm._$g(76, "a-disabled"),
-                      placeholder: "请链接测厚仪读值",
-                      _i: 76,
-                    },
-                    model: {
-                      value: _vm._$g(76, "v-model"),
-                      callback: function ($$v) {
-                        _vm.$handleVModelEvent(76, $$v)
-                      },
-                      expression: "nowvalue8",
-                    },
-                  }),
-                  _c(
-                    "v-uni-button",
-                    {
+                      staticStyle: { "margin-left": "10px" },
                       attrs: { _i: 77 },
-                      on: {
-                        click: function ($event) {
-                          return _vm.$handleViewEvent($event)
-                        },
-                      },
                     },
-                    [_vm._v(_vm._$g(77, "t0-0"))]
+                    [_vm._v("上次测点编号7：" + _vm._$g(77, "t0-0"))]
                   ),
                 ],
                 1
@@ -4935,50 +4914,38 @@ var render = function () {
               _c(
                 "uni-view",
                 { staticClass: _vm._$g(79, "sc"), attrs: { _i: 79 } },
-                [_vm._v("测点编号9：" + _vm._$g(79, "t0-0"))]
-              ),
-            ],
-            1
-          ),
-          _c(
-            "uni-view",
-            { staticClass: _vm._$g(80, "sc"), attrs: { _i: 80 } },
-            [
-              _c(
-                "uni-view",
-                { staticClass: _vm._$g(81, "sc"), attrs: { _i: 81 } },
                 [
                   _c(
                     "uni-view",
-                    { staticClass: _vm._$g(82, "sc"), attrs: { _i: 82 } },
-                    [_vm._v("测点厚度9：")]
+                    { staticClass: _vm._$g(80, "sc"), attrs: { _i: 80 } },
+                    [_vm._v("测点厚度7：")]
                   ),
                   _c("v-uni-input", {
-                    staticClass: _vm._$g(83, "sc"),
+                    staticClass: _vm._$g(81, "sc"),
                     attrs: {
-                      disabled: _vm._$g(83, "a-disabled"),
+                      disabled: _vm._$g(81, "a-disabled"),
                       placeholder: "请链接测厚仪读值",
-                      _i: 83,
+                      _i: 81,
                     },
                     model: {
-                      value: _vm._$g(83, "v-model"),
+                      value: _vm._$g(81, "v-model"),
                       callback: function ($$v) {
-                        _vm.$handleVModelEvent(83, $$v)
+                        _vm.$handleVModelEvent(81, $$v)
                       },
-                      expression: "nowvalue9",
+                      expression: "nowvalue7",
                     },
                   }),
                   _c(
                     "v-uni-button",
                     {
-                      attrs: { _i: 84 },
+                      attrs: { _i: 82 },
                       on: {
                         click: function ($event) {
                           return _vm.$handleViewEvent($event)
                         },
                       },
                     },
-                    [_vm._v(_vm._$g(84, "t0-0"))]
+                    [_vm._v(_vm._$g(82, "t0-0"))]
                   ),
                 ],
                 1
@@ -4988,12 +4955,25 @@ var render = function () {
           ),
           _c(
             "uni-view",
-            { staticClass: _vm._$g(85, "sc"), attrs: { _i: 85 } },
+            { staticClass: _vm._$g(83, "sc"), attrs: { _i: 83 } },
             [
               _c(
                 "uni-view",
-                { staticClass: _vm._$g(86, "sc"), attrs: { _i: 86 } },
-                [_vm._v("测点编号10：" + _vm._$g(86, "t0-0"))]
+                { staticClass: _vm._$g(84, "sc"), attrs: { _i: 84 } },
+                [
+                  _c("v-uni-text", { attrs: { _i: 85 } }, [
+                    _vm._v("测点编号8：" + _vm._$g(85, "t0-0")),
+                  ]),
+                  _c(
+                    "v-uni-text",
+                    {
+                      staticStyle: { "margin-left": "10px" },
+                      attrs: { _i: 86 },
+                    },
+                    [_vm._v("上次测点编号8：" + _vm._$g(86, "t0-0"))]
+                  ),
+                ],
+                1
               ),
             ],
             1
@@ -5009,7 +4989,7 @@ var render = function () {
                   _c(
                     "uni-view",
                     { staticClass: _vm._$g(89, "sc"), attrs: { _i: 89 } },
-                    [_vm._v("测点厚度10：")]
+                    [_vm._v("测点厚度8：")]
                   ),
                   _c("v-uni-input", {
                     staticClass: _vm._$g(90, "sc"),
@@ -5023,7 +5003,7 @@ var render = function () {
                       callback: function ($$v) {
                         _vm.$handleVModelEvent(90, $$v)
                       },
-                      expression: "nowvalue10",
+                      expression: "nowvalue8",
                     },
                   }),
                   _c(
@@ -5051,50 +5031,17 @@ var render = function () {
               _c(
                 "uni-view",
                 { staticClass: _vm._$g(93, "sc"), attrs: { _i: 93 } },
-                [_vm._v("测点编号11：" + _vm._$g(93, "t0-0"))]
-              ),
-            ],
-            1
-          ),
-          _c(
-            "uni-view",
-            { staticClass: _vm._$g(94, "sc"), attrs: { _i: 94 } },
-            [
-              _c(
-                "uni-view",
-                { staticClass: _vm._$g(95, "sc"), attrs: { _i: 95 } },
                 [
+                  _c("v-uni-text", { attrs: { _i: 94 } }, [
+                    _vm._v("测点编号9：" + _vm._$g(94, "t0-0")),
+                  ]),
                   _c(
-                    "uni-view",
-                    { staticClass: _vm._$g(96, "sc"), attrs: { _i: 96 } },
-                    [_vm._v("测点厚度11：")]
-                  ),
-                  _c("v-uni-input", {
-                    staticClass: _vm._$g(97, "sc"),
-                    attrs: {
-                      disabled: _vm._$g(97, "a-disabled"),
-                      placeholder: "请链接测厚仪读值",
-                      _i: 97,
-                    },
-                    model: {
-                      value: _vm._$g(97, "v-model"),
-                      callback: function ($$v) {
-                        _vm.$handleVModelEvent(97, $$v)
-                      },
-                      expression: "nowvalue11",
-                    },
-                  }),
-                  _c(
-                    "v-uni-button",
+                    "v-uni-text",
                     {
-                      attrs: { _i: 98 },
-                      on: {
-                        click: function ($event) {
-                          return _vm.$handleViewEvent($event)
-                        },
-                      },
+                      staticStyle: { "margin-left": "10px" },
+                      attrs: { _i: 95 },
                     },
-                    [_vm._v(_vm._$g(98, "t0-0"))]
+                    [_vm._v("上次测点编号1：" + _vm._$g(95, "t0-0"))]
                   ),
                 ],
                 1
@@ -5104,12 +5051,46 @@ var render = function () {
           ),
           _c(
             "uni-view",
-            { staticClass: _vm._$g(99, "sc"), attrs: { _i: 99 } },
+            { staticClass: _vm._$g(96, "sc"), attrs: { _i: 96 } },
             [
               _c(
                 "uni-view",
-                { staticClass: _vm._$g(100, "sc"), attrs: { _i: 100 } },
-                [_vm._v("测点编号12：" + _vm._$g(100, "t0-0"))]
+                { staticClass: _vm._$g(97, "sc"), attrs: { _i: 97 } },
+                [
+                  _c(
+                    "uni-view",
+                    { staticClass: _vm._$g(98, "sc"), attrs: { _i: 98 } },
+                    [_vm._v("测点厚度9：")]
+                  ),
+                  _c("v-uni-input", {
+                    staticClass: _vm._$g(99, "sc"),
+                    attrs: {
+                      disabled: _vm._$g(99, "a-disabled"),
+                      placeholder: "请链接测厚仪读值",
+                      _i: 99,
+                    },
+                    model: {
+                      value: _vm._$g(99, "v-model"),
+                      callback: function ($$v) {
+                        _vm.$handleVModelEvent(99, $$v)
+                      },
+                      expression: "nowvalue9",
+                    },
+                  }),
+                  _c(
+                    "v-uni-button",
+                    {
+                      attrs: { _i: 100 },
+                      on: {
+                        click: function ($event) {
+                          return _vm.$handleViewEvent($event)
+                        },
+                      },
+                    },
+                    [_vm._v(_vm._$g(100, "t0-0"))]
+                  ),
+                ],
+                1
               ),
             ],
             1
@@ -5122,37 +5103,16 @@ var render = function () {
                 "uni-view",
                 { staticClass: _vm._$g(102, "sc"), attrs: { _i: 102 } },
                 [
+                  _c("v-uni-text", { attrs: { _i: 103 } }, [
+                    _vm._v("测点编号10：" + _vm._$g(103, "t0-0")),
+                  ]),
                   _c(
-                    "uni-view",
-                    { staticClass: _vm._$g(103, "sc"), attrs: { _i: 103 } },
-                    [_vm._v("测点厚度12：")]
-                  ),
-                  _c("v-uni-input", {
-                    staticClass: _vm._$g(104, "sc"),
-                    attrs: {
-                      disabled: _vm._$g(104, "a-disabled"),
-                      placeholder: "请链接测厚仪读值",
-                      _i: 104,
-                    },
-                    model: {
-                      value: _vm._$g(104, "v-model"),
-                      callback: function ($$v) {
-                        _vm.$handleVModelEvent(104, $$v)
-                      },
-                      expression: "nowvalue12",
-                    },
-                  }),
-                  _c(
-                    "v-uni-button",
+                    "v-uni-text",
                     {
-                      attrs: { _i: 105 },
-                      on: {
-                        click: function ($event) {
-                          return _vm.$handleViewEvent($event)
-                        },
-                      },
+                      staticStyle: { "margin-left": "10px" },
+                      attrs: { _i: 104 },
                     },
-                    [_vm._v(_vm._$g(105, "t0-0"))]
+                    [_vm._v("上次测点编号1：" + _vm._$g(104, "t0-0"))]
                   ),
                 ],
                 1
@@ -5162,40 +5122,241 @@ var render = function () {
           ),
           _c(
             "uni-view",
-            { staticClass: _vm._$g(106, "sc"), attrs: { _i: 106 } },
+            { staticClass: _vm._$g(105, "sc"), attrs: { _i: 105 } },
             [
               _c(
                 "uni-view",
-                { staticClass: _vm._$g(107, "sc"), attrs: { _i: 107 } },
-                [_vm._v("测点编号13：" + _vm._$g(107, "t0-0"))]
+                { staticClass: _vm._$g(106, "sc"), attrs: { _i: 106 } },
+                [
+                  _c(
+                    "uni-view",
+                    { staticClass: _vm._$g(107, "sc"), attrs: { _i: 107 } },
+                    [_vm._v("测点厚度10：")]
+                  ),
+                  _c("v-uni-input", {
+                    staticClass: _vm._$g(108, "sc"),
+                    attrs: {
+                      disabled: _vm._$g(108, "a-disabled"),
+                      placeholder: "请链接测厚仪读值",
+                      _i: 108,
+                    },
+                    model: {
+                      value: _vm._$g(108, "v-model"),
+                      callback: function ($$v) {
+                        _vm.$handleVModelEvent(108, $$v)
+                      },
+                      expression: "nowvalue10",
+                    },
+                  }),
+                  _c(
+                    "v-uni-button",
+                    {
+                      attrs: { _i: 109 },
+                      on: {
+                        click: function ($event) {
+                          return _vm.$handleViewEvent($event)
+                        },
+                      },
+                    },
+                    [_vm._v(_vm._$g(109, "t0-0"))]
+                  ),
+                ],
+                1
               ),
             ],
             1
           ),
           _c(
             "uni-view",
-            { staticClass: _vm._$g(108, "sc"), attrs: { _i: 108 } },
+            { staticClass: _vm._$g(110, "sc"), attrs: { _i: 110 } },
             [
               _c(
                 "uni-view",
-                { staticClass: _vm._$g(109, "sc"), attrs: { _i: 109 } },
+                { staticClass: _vm._$g(111, "sc"), attrs: { _i: 111 } },
+                [
+                  _c("v-uni-text", { attrs: { _i: 112 } }, [
+                    _vm._v("测点编号11：" + _vm._$g(112, "t0-0")),
+                  ]),
+                  _c(
+                    "v-uni-text",
+                    {
+                      staticStyle: { "margin-left": "10px" },
+                      attrs: { _i: 113 },
+                    },
+                    [_vm._v("上次测点编号11：" + _vm._$g(113, "t0-0"))]
+                  ),
+                ],
+                1
+              ),
+            ],
+            1
+          ),
+          _c(
+            "uni-view",
+            { staticClass: _vm._$g(114, "sc"), attrs: { _i: 114 } },
+            [
+              _c(
+                "uni-view",
+                { staticClass: _vm._$g(115, "sc"), attrs: { _i: 115 } },
                 [
                   _c(
                     "uni-view",
-                    { staticClass: _vm._$g(110, "sc"), attrs: { _i: 110 } },
+                    { staticClass: _vm._$g(116, "sc"), attrs: { _i: 116 } },
+                    [_vm._v("测点厚度11：")]
+                  ),
+                  _c("v-uni-input", {
+                    staticClass: _vm._$g(117, "sc"),
+                    attrs: {
+                      disabled: _vm._$g(117, "a-disabled"),
+                      placeholder: "请链接测厚仪读值",
+                      _i: 117,
+                    },
+                    model: {
+                      value: _vm._$g(117, "v-model"),
+                      callback: function ($$v) {
+                        _vm.$handleVModelEvent(117, $$v)
+                      },
+                      expression: "nowvalue11",
+                    },
+                  }),
+                  _c(
+                    "v-uni-button",
+                    {
+                      attrs: { _i: 118 },
+                      on: {
+                        click: function ($event) {
+                          return _vm.$handleViewEvent($event)
+                        },
+                      },
+                    },
+                    [_vm._v(_vm._$g(118, "t0-0"))]
+                  ),
+                ],
+                1
+              ),
+            ],
+            1
+          ),
+          _c(
+            "uni-view",
+            { staticClass: _vm._$g(119, "sc"), attrs: { _i: 119 } },
+            [
+              _c(
+                "uni-view",
+                { staticClass: _vm._$g(120, "sc"), attrs: { _i: 120 } },
+                [
+                  _c("v-uni-text", { attrs: { _i: 121 } }, [
+                    _vm._v("测点编号12：" + _vm._$g(121, "t0-0")),
+                  ]),
+                  _c(
+                    "v-uni-text",
+                    {
+                      staticStyle: { "margin-left": "10px" },
+                      attrs: { _i: 122 },
+                    },
+                    [_vm._v("上次测点编号12：" + _vm._$g(122, "t0-0"))]
+                  ),
+                ],
+                1
+              ),
+            ],
+            1
+          ),
+          _c(
+            "uni-view",
+            { staticClass: _vm._$g(123, "sc"), attrs: { _i: 123 } },
+            [
+              _c(
+                "uni-view",
+                { staticClass: _vm._$g(124, "sc"), attrs: { _i: 124 } },
+                [
+                  _c(
+                    "uni-view",
+                    { staticClass: _vm._$g(125, "sc"), attrs: { _i: 125 } },
+                    [_vm._v("测点厚度12：")]
+                  ),
+                  _c("v-uni-input", {
+                    staticClass: _vm._$g(126, "sc"),
+                    attrs: {
+                      disabled: _vm._$g(126, "a-disabled"),
+                      placeholder: "请链接测厚仪读值",
+                      _i: 126,
+                    },
+                    model: {
+                      value: _vm._$g(126, "v-model"),
+                      callback: function ($$v) {
+                        _vm.$handleVModelEvent(126, $$v)
+                      },
+                      expression: "nowvalue12",
+                    },
+                  }),
+                  _c(
+                    "v-uni-button",
+                    {
+                      attrs: { _i: 127 },
+                      on: {
+                        click: function ($event) {
+                          return _vm.$handleViewEvent($event)
+                        },
+                      },
+                    },
+                    [_vm._v(_vm._$g(127, "t0-0"))]
+                  ),
+                ],
+                1
+              ),
+            ],
+            1
+          ),
+          _c(
+            "uni-view",
+            { staticClass: _vm._$g(128, "sc"), attrs: { _i: 128 } },
+            [
+              _c(
+                "uni-view",
+                { staticClass: _vm._$g(129, "sc"), attrs: { _i: 129 } },
+                [
+                  _c("v-uni-text", { attrs: { _i: 130 } }, [
+                    _vm._v("测点编号13：" + _vm._$g(130, "t0-0")),
+                  ]),
+                  _c(
+                    "v-uni-text",
+                    {
+                      staticStyle: { "margin-left": "10px" },
+                      attrs: { _i: 131 },
+                    },
+                    [_vm._v("上次测点编号13：" + _vm._$g(131, "t0-0"))]
+                  ),
+                ],
+                1
+              ),
+            ],
+            1
+          ),
+          _c(
+            "uni-view",
+            { staticClass: _vm._$g(132, "sc"), attrs: { _i: 132 } },
+            [
+              _c(
+                "uni-view",
+                { staticClass: _vm._$g(133, "sc"), attrs: { _i: 133 } },
+                [
+                  _c(
+                    "uni-view",
+                    { staticClass: _vm._$g(134, "sc"), attrs: { _i: 134 } },
                     [_vm._v("测点厚度13：")]
                   ),
                   _c("v-uni-input", {
-                    staticClass: _vm._$g(111, "sc"),
+                    staticClass: _vm._$g(135, "sc"),
                     attrs: {
-                      disabled: _vm._$g(111, "a-disabled"),
+                      disabled: _vm._$g(135, "a-disabled"),
                       placeholder: "请链接测厚仪读值",
-                      _i: 111,
+                      _i: 135,
                     },
                     model: {
-                      value: _vm._$g(111, "v-model"),
+                      value: _vm._$g(135, "v-model"),
                       callback: function ($$v) {
-                        _vm.$handleVModelEvent(111, $$v)
+                        _vm.$handleVModelEvent(135, $$v)
                       },
                       expression: "nowvalue13",
                     },
@@ -5203,14 +5364,14 @@ var render = function () {
                   _c(
                     "v-uni-button",
                     {
-                      attrs: { _i: 112 },
+                      attrs: { _i: 136 },
                       on: {
                         click: function ($event) {
                           return _vm.$handleViewEvent($event)
                         },
                       },
                     },
-                    [_vm._v(_vm._$g(112, "t0-0"))]
+                    [_vm._v(_vm._$g(136, "t0-0"))]
                   ),
                 ],
                 1
@@ -5220,7 +5381,7 @@ var render = function () {
           ),
           _c("uni-view", {
             staticStyle: { "margin-bottom": "20px", height: "100px" },
-            attrs: { _i: 113 },
+            attrs: { _i: 137 },
           }),
           _c(
             "uni-view",
@@ -5232,15 +5393,15 @@ var render = function () {
                 position: "fixed",
                 bottom: "10px",
               },
-              attrs: { _i: 114 },
+              attrs: { _i: 138 },
             },
             [
               _c(
                 "v-uni-button",
                 {
-                  staticClass: _vm._$g(115, "sc"),
+                  staticClass: _vm._$g(139, "sc"),
                   staticStyle: { "background-color": "orange", width: "50%" },
-                  attrs: { _i: 115 },
+                  attrs: { _i: 139 },
                   on: {
                     click: function ($event) {
                       return _vm.$handleViewEvent($event)
@@ -5252,13 +5413,13 @@ var render = function () {
               _c(
                 "v-uni-button",
                 {
-                  staticClass: _vm._$g(116, "sc"),
+                  staticClass: _vm._$g(140, "sc"),
                   staticStyle: {
                     "background-color": "lawngreen",
                     width: "50%",
                     "margin-left": "10px",
                   },
-                  attrs: { _i: 116 },
+                  attrs: { _i: 140 },
                   on: {
                     click: function ($event) {
                       return _vm.$handleViewEvent($event)
@@ -5270,13 +5431,13 @@ var render = function () {
               _c(
                 "v-uni-button",
                 {
-                  staticClass: _vm._$g(117, "sc"),
+                  staticClass: _vm._$g(141, "sc"),
                   staticStyle: {
                     "background-color": "skyblue",
                     width: "50%",
                     "margin-left": "10px",
                   },
-                  attrs: { _i: 117 },
+                  attrs: { _i: 141 },
                   on: {
                     click: function ($event) {
                       return _vm.$handleViewEvent($event)
@@ -5288,13 +5449,13 @@ var render = function () {
               _c(
                 "v-uni-button",
                 {
-                  staticClass: _vm._$g(118, "sc"),
+                  staticClass: _vm._$g(142, "sc"),
                   staticStyle: {
                     "background-color": "cornsilk",
                     width: "50%",
                     "margin-left": "10px",
                   },
-                  attrs: { _i: 118 },
+                  attrs: { _i: 142 },
                   on: {
                     click: function ($event) {
                       return _vm.$handleViewEvent($event)
@@ -5306,13 +5467,13 @@ var render = function () {
               _c(
                 "v-uni-button",
                 {
-                  staticClass: _vm._$g(119, "sc"),
+                  staticClass: _vm._$g(143, "sc"),
                   staticStyle: {
                     "background-color": "orangered",
                     width: "50%",
                     "margin-left": "10px",
                   },
-                  attrs: { _i: 119 },
+                  attrs: { _i: 143 },
                   on: {
                     click: function ($event) {
                       return _vm.$handleViewEvent($event)
@@ -5323,18 +5484,18 @@ var render = function () {
               ),
               _c(
                 "uni-popup",
-                { ref: "inputDialog", attrs: { _i: 120 } },
+                { ref: "inputDialog", attrs: { _i: 144 } },
                 [
                   _c("uni-popup-dialog", {
                     ref: "inputClose",
-                    attrs: { _i: 121 },
+                    attrs: { _i: 145 },
                     on: {
                       confirm: function ($event) {
                         return _vm.$handleViewEvent($event)
                       },
                     },
                     model: {
-                      value: _vm._$g(121, "v-model"),
+                      value: _vm._$g(145, "v-model"),
                       callback: function () {},
                       expression: "wifiname",
                     },

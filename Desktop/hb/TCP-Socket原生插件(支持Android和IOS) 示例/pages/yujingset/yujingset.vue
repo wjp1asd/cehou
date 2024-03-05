@@ -44,7 +44,7 @@
 					}
 				doo.yujingcheck=cje;
 				doo.items=res.data;
-			
+			    uni.setStorageSync('yujing',doo.yujingcheck)
 			
 				
 											  
